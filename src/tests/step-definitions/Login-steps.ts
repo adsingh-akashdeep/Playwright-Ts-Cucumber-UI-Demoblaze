@@ -40,8 +40,16 @@ When('user enters invalid password', async function () {
 });
 
 Then('popup should appear with error message', async function () {
-   
-});
+    page.on("dialog",async(alert)=>{
+        const alertMessage = alert.message();
+        await page.pause();
+        expect(alertMessage).toEqual('I am a JS Confirm');
+        await alert.accept();
+        await expect(page.locator('#result')).toHaveText('You clicked: Ok');
+    })
+    await page.locator('button[onclick="jsConfirm()"]').click();
+    await page.close();
+   });
 
 // Scenerio 3
 When('user leaves empty username field', async function () {

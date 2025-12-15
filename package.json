@@ -11,6 +11,6 @@
     "ts-node": "^10.9.2"
   },
   "scripts": {
-    "bdd": "cucumber-js"
+    "test":
   }
 }
