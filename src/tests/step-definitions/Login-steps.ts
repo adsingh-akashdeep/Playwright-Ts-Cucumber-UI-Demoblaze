@@ -19,11 +19,11 @@ Given('the user clicks the login button', async function () {
 
 // Scenerio 1
 When('user enters the valid username', async function () {
-    await loginPage.enterUsername('akashdeep1994');
+    await loginPage.enterUsername('----');
 });
 
 When('user enters the valid password', async function () {
-    await loginPage.enterPassword('1807')
+    await loginPage.enterPassword('----')
 });
 
 Then('user should be redirected to home page', async function () {
@@ -32,7 +32,7 @@ Then('user should be redirected to home page', async function () {
 
 // Scenerio 2
 When('user enters invalid username', async function () {
-    await loginPage.enterUsername('akashdeep1234')
+    await loginPage.enterUsername('sdkfiierj2323')
 });
 
 When('user enters invalid password', async function () {
